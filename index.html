@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<meta charset="UTF-8">
+	<meta name="description" content="Free board game">
+    <meta name="keywords" content="board game,dice,multiple laps,free">
+    <meta name="author" content="Jesska">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/keys.js"></script>
+	<title>Canalpoly</title>
+</head>
+<body onload="inGame.iniT()" style="background-color: black">
+    
+    <canvas onmousemove="keyS.getMousePos(event)" onclick="keyS.click()" id="canvas"></canvas>
+        <canvas id="overlay" style="display: none;"></div>
+        <div style="display:none;">
+            <img id="nmap" src="img/nmap.png">
+
+            <img id="chip1" src="img/chip1.png">
+            <img id="chip2" src="img/chip2.png">
+            <img id="chip3" src="img/chip3.png">
+            <img id="chip4" src="img/chip4.png">
+            <img id="chip5" src="img/chip5.png">
+            <img id="chip6" src="img/chip6.png">
+            <img id="chip7" src="img/chip7.png">
+            <img id="chip8" src="img/chip8.png">
+            <img id="chip9" src="img/chip9.png">
+
+            <img id="dice1" src="img/dice1.png">
+            <img id="dice2" src="img/dice2.png">
+            <img id="dice3" src="img/dice3.png">
+            <img id="dice4" src="img/dice4.png">
+            <img id="dice5" src="img/dice5.png">
+            <img id="dice6" src="img/dice6.png">
+
+            <img id="endTurn" src="img/endTurn.png">
+            <img id="endTurnOn" src="img/endTurnOn.png">
+
+            <img id="rollBtn" src="img/rollBtn.png">
+            <img id="rollBtnOn" src="img/rollBtnOn.png">
+
+            <img id="resetBtn" src="img/reset.png">
+            <img id="resetOn" src="img/resetOn.png">
+
+        </div>
+</body>
+
+<script type="text/javascript" src="js/canvas.js"></script>
+<script type="text/javascript" src="js/blocksArray.js"></script>
+<script type="text/javascript" src="js/roll.js"></script>
+<script type="text/javascript" src="js/init.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+	
+</html>

@@ -1,0 +1,45 @@
+
+#canvas {
+	position: absolute;
+    background-color: black;
+    
+}
+#overlay {
+    position: absolute;
+    background-color: black;
+}
+#seeGame {
+	display: none;
+}
+#radioForm {
+    display: none;
+    margin: auto;
+    width: 50vw;
+    height: 20vw;
+    max-height: 20vh;
+    max-width: 50vh;
+    /*border: 0.1%;*/
+    padding: 1%;
+    text-align: center;
+    color: white;
+    /*background-color: #3377dd;*/
+    font-size: 140%;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+}
+.menu {
+    
+    margin: auto;
+    width: 50vw;
+    height: 10vw;
+	max-height: 10vh;
+    max-width: 50vh;
+    /*border: 0.1%;*/
+    padding: 1%;
+    text-align: center;
+    color: white;
+    background-color: #3377dd;
+    font-size: 140%;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+}
