@@ -1,3 +1,4 @@
+//new something
 task:
 Create new gamestate "-1" where options, start game buttons, restart located.
 1. create overlay canvas where we will have options and opacity original canvas. Hide canvas after exit menu.
