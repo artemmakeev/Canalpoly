@@ -1,0 +1,117 @@
+task:
+Create new gamestate "-1" where options, start game buttons, restart located.
+1. create overlay canvas where we will have options and opacity original canvas. Hide canvas after exit menu.
+
+
+
+
+Any object have a draw function with coordinates with object or with object methods
+
+
+
+inGame.start
+
+ingame
+
+
+// gameState = 
+.game 
+player1 - 4
+curPlayer = 1 .. 4
+
+endTurn: curPlayer ++ if curPlayer > 4 curPlayer = 1
+
+case 1 .. 4
+
+
+
+if 1 - 
+
+.menu 
+.options
+
+
+
+currentPlayer = 1/4
+
+
+gameSave:
+
+player1pos
+player2pos
+player3pos
+player4pos
+
+player1turn
+player2turn
+player3turn
+player4turn
+
+scores
+
+firms
+
+chances
+
+10 years from now:
+
+a 100 times more powerfull computers for the same power/money
+crude cloaking tech available, tech students make cloaks.
+full self-driving widespread for last 5 years and reach superhuman capabilities and become ubiquous. Uberlike services are super-cheap. Manufacturers mostly produce selfdriving cars. A lot of people still drive old 2010-2022 regular cars. These cars are super-cheap. A big percentage of people even use older than that vehicles.
+
+Household robots debut, very expensive and not yet popular. Around 2020-2025 first robot that can perform human-capable operations like moving items, drilling, cleaning, etc in human or almost human quality. But only around 2025-2030 it became actually possible to buy one. Rich people and companies start using those around 2027.
+
+8k VR/AR widespread. Around 2020-2025 4k vr widespread, around 2025-2030 8k vr widespread
+End of 2018 4k laptop vr here for the same money as HD and 2k desktop vr in early 2016.
+around 2025 smartphones are 8k VR devices.
+
+We started grow organs just like we grow skin and bones in 2017.
+
+Artificial eye with color quality HD image - likely
+Growing/creating first eye in lab close or possible.
+
+First human neural lace 2027
+Available to buy around early 2030s
+
+Robotic surgery in 2027 for $200.
+
+We're still mortal, although significantly reduced mortality from illness.
+We still have Cancer, Altzheimer, etc. We will likely eradicate HIV
+
+
+
+
+cloak
+
+
+
+new game with risk health and dmg calculation
+
+always vampiric
+lower health - higher dmg
+
+
+you can upgrade and allocate any time vampiric, dmg, health, armor, cc, range, speed?
+
+Single melee character to try out, then ranged, etc.
+
+lvlups
+
+lvl1 100hp, 10 armor, 10 mr, 10 dmg 10 range, 10 speed, 10% vampiric, 1 hp regen/sec, 10% crit chance only autoattack   200 energy
+lvl2 120hp, 12 armor, 12 mr, 12 dmg 10 range, 10 speed, 10% vampiric, 1.1 hp regen/sec, 10% crit chance only autoattack 200 energy, 20/sec
+dmg = 100/(100 + target armor)
+if armor < 0     dmg = 2 - (100/100-armor)
+
+you can buy items +dmg, +armor, +hp, + speed, + vampiric, +regen, +crit chance, +crit dmg, +energy
+
+
+if hp < 40% +10% vampiric x2 dmg, x1.5armor, x1.2 speed, half energy spending
+
+q - basic attack 40 energy x2 basic atk
+w - heavy attack/cc 80 energy
+e - evade 30 energy 0.5 sec inv, 1 sec reload
+r - ultimate move 170 energy
+
+
+weapons: hand, 
+
