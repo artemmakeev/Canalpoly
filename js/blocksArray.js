@@ -1,6 +1,6 @@
 var blocksM = [
     [2.6, 92.6], //0 startM
-    [2.6, 83.7], //1 nycM 
+    [2.6, 83.7], //1 nycM
     [2.6, 74.7], //2 boingM
     [2.6, 65.7], //3 chance_3M
     [2.6, 56.7], //4 walmartM
