@@ -60,15 +60,15 @@ var drawCanvas = { // draw objects on canvas, animate and scale it.
             var xPercent = blocksM[pos][0] - aniCon * 0.5 * z;
             var yPercent = blocksM[pos][1] - aniCon * 0.5 * z;
         } else if ((pos > 100) && (pos < 200)) {
-            var xPercent = blocksPanamaM[pos][0] - aniCon * 0.5 * z;
-            var yPercent = blocksPanamaM[pos][1] - aniCon * 0.5 * z;
+            var xPercent = blocksPanamaM[pos - 108][0] - aniCon * 0.5 * z;
+            var yPercent = blocksPanamaM[pos - 108][1] - aniCon * 0.5 * z;
         } else {
-            var xPercent = blocksSuezM[pos][0] - aniCon * 0.5 * z;
-            var yPercent = blocksSuezM[pos][1] - aniCon * 0.5 * z;
+            var xPercent = blocksSuezM[pos - 227][0] - aniCon * 0.5 * z;
+            var yPercent = blocksSuezM[pos - 227][1] - aniCon * 0.5 * z;
         };
 
-        var xPercent = blocksM[pos][0] - aniCon * 0.5 * z;
-        var yPercent = blocksM[pos][1] - aniCon * 0.5 * z;
+       // var xPercent = blocksM[pos][0] - aniCon * 0.5 * z;
+        //var yPercent = blocksM[pos][1] - aniCon * 0.5 * z;
         var xScale = 4.6 + aniCon * z;
         var yScale = 4.6 + aniCon * z;
         drawCanvas.drawScale(chip, xPercent + x, yPercent + y, xScale, yScale);

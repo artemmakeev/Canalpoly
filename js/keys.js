@@ -2,13 +2,9 @@ var keyS = { // object that capture user input
 
 // !!!!!!!move this to main loop!!!!!!!
 	posModify : function(pos, chip, x, zeD) { // move this to main loop! wtf?
-		position[pos][x] = 0;
+		position[pos][x] = 0; // zeD - is a currentRoll a sum of dice from roll.js
 		
-        // if we could move through panama:
-        if (((pos <= 7) && ((pos + zeD) > 7)) || ( (pos > 7) && ((((pos + zeD) > 53) && ((pos + zeD) < 108)) || (((pos + zeD) > 153) && ((pos + zeD) < 227)) || ((pos + zeD) > 253)) )) {
-            inGame.gameState = 2;
-            inGame.saveState();
-        };
+        
         //if (((pos <= 7) && ((pos + zeD) > 13) && ((pos + zeD) < 108)))
         // ((pos <= 7) && ((pos + zeD) > 13))
         // ((pos > 107) && (pos <= 113)) && ((pos + zeD) > 113)
@@ -17,53 +13,166 @@ var keyS = { // object that capture user input
         // if we could move through suez:
 
         //2. if pos > 7 && (pos + zeD) > 53 || (pos + zeD) > 153/253
+
 		if ((pos + zeD) < 46) { //did not cross start with next move.
-			switch (chip) {
-				case 1:
-					chip1.pos = chip1.pos + zeD;
-					localStorage.setItem("chip" + chip, chip1.pos);
-					break;
-				case 2:
-					chip2.pos = chip2.pos + zeD;
-					localStorage.setItem("chip" + chip, chip2.pos);
-					break;
-				case 3:
-					chip3.pos = chip3.pos + zeD;
-					localStorage.setItem("chip" + chip, chip3.pos);
-					break;
-				case 4:
-					chip4.pos = chip4.pos + zeD;
-					localStorage.setItem("chip" + chip, chip4.pos);
-					break;
-			};
+			if ((pos <= 7) && ((pos + zeD) > 7) && ((pos + zeD) < 12)) {
+                switch (chip) {
+                case 1:
+                    chip1.pos = chip1.pos + zeD + 100;
+                    localStorage.setItem("chip" + chip, chip1.pos); // replace with inGame.saveState
+                    break;                                          // remove repeated switch and create single function
+                case 2:
+                    chip2.pos = chip2.pos + zeD + 100;
+                    localStorage.setItem("chip" + chip, chip2.pos);
+                    break;
+                case 3:
+                    chip3.pos = chip3.pos + zeD + 100;
+                    localStorage.setItem("chip" + chip, chip3.pos);
+                    break;
+                case 4:
+                    chip4.pos = chip4.pos + zeD + 100;
+                    localStorage.setItem("chip" + chip, chip4.pos);
+                    break;
+                };
+                pos = pos + 100;
+
+            } else if ((pos <= 7) && ((pos + zeD) > 11)) {
+                switch (chip) {
+                case 1:
+                    chip1.pos = chip1.pos + zeD + 13;
+                    localStorage.setItem("chip" + chip, chip1.pos); // replace with inGame.saveState
+                    break;                                          // remove repeated switch and create single function
+                case 2:
+                    chip2.pos = chip2.pos + zeD + 13;
+                    localStorage.setItem("chip" + chip, chip2.pos);
+                    break;
+                case 3:
+                    chip3.pos = chip3.pos + zeD + 13;
+                    localStorage.setItem("chip" + chip, chip3.pos);
+                    break;
+                case 4:
+                    chip4.pos = chip4.pos + zeD + 13;
+                    localStorage.setItem("chip" + chip, chip4.pos);
+                    break;
+                };
+                pos = pos + 13;
+
+
+            } else {
+                switch (chip) {
+    				case 1:
+    					chip1.pos = chip1.pos + zeD;
+    					localStorage.setItem("chip" + chip, chip1.pos); // replace with inGame.saveState
+    					break;
+    				case 2:
+    					chip2.pos = chip2.pos + zeD;
+    					localStorage.setItem("chip" + chip, chip2.pos);
+    					break;
+    				case 3:
+    					chip3.pos = chip3.pos + zeD;
+    					localStorage.setItem("chip" + chip, chip3.pos);
+    					break;
+    				case 4:
+    					chip4.pos = chip4.pos + zeD;
+    					localStorage.setItem("chip" + chip, chip4.pos);
+    					break;
+    			};
+            };
 			pos = pos + zeD;
-		} else if ((pos + zeD) > 45) { // did cross start
-			switch (chip) {
-				case 1:
-					chip1.pos = chip1.pos + zeD - 46;
-					chip1.score += 500;
-					localStorage.setItem("chip" + chip, chip1.pos);
-					break;
-				case 2:
-					chip2.pos = chip2.pos + zeD - 46;
-					chip2.score += 500;
-					localStorage.setItem("chip" + chip, chip2.pos);
-					break;
-				case 3:
-					chip3.pos = chip3.pos + zeD - 46;
-					chip3.score += 500;
-					localStorage.setItem("chip" + chip, chip3.pos);
-					break;
-				case 4:
-					chip4.pos = chip4.pos + zeD - 46;
-					chip4.score += 500;
-					localStorage.setItem("chip" + chip, chip4.pos);
-					break;
-			};
+		} else if (((pos + zeD) > 45) && ((pos + zeD) < 108)) { // did cross start
+            if ( (pos > 7) && ((((pos + zeD) > 53) && ((pos + zeD) < 108)) || (((pos + zeD) > 153) && ((pos + zeD) < 227)) || ((pos + zeD) > 253)) ) {
+                switch (chip) {
+                    case 1:
+                        chip1.pos = chip1.pos + zeD - 46 + 100;
+                        chip1.score += 500;
+                        localStorage.setItem("chip" + chip, chip1.pos);
+                        break;
+                    case 2:
+                        chip2.pos = chip2.pos + zeD - 46 + 100;
+                        chip2.score += 500;
+                        localStorage.setItem("chip" + chip, chip2.pos);
+                        break;
+                    case 3:
+                        chip3.pos = chip3.pos + zeD - 46 + 100;
+                        chip3.score += 500;
+                        localStorage.setItem("chip" + chip, chip3.pos);
+                        break;
+                    case 4:
+                        chip4.pos = chip4.pos + zeD - 46 + 100;
+                        chip4.score += 500;
+                        localStorage.setItem("chip" + chip, chip4.pos);
+                        break;
+                };
+                pos = pos + 100;
+            } else {
+    			switch (chip) {
+    				case 1:
+    					chip1.pos = chip1.pos + zeD - 46;
+    					chip1.score += 500;
+    					localStorage.setItem("chip" + chip, chip1.pos);
+    					break;
+    				case 2:
+    					chip2.pos = chip2.pos + zeD - 46;
+    					chip2.score += 500;
+    					localStorage.setItem("chip" + chip, chip2.pos);
+    					break;
+    				case 3:
+    					chip3.pos = chip3.pos + zeD - 46;
+    					chip3.score += 500;
+    					localStorage.setItem("chip" + chip, chip3.pos);
+    					break;
+    				case 4:
+    					chip4.pos = chip4.pos + zeD - 46;
+    					chip4.score += 500;
+    					localStorage.setItem("chip" + chip, chip4.pos);
+    					break;
+    			};
+            };
 			pos = pos + zeD - 46;
-		};
+		} else if (((pos + zeD) > 109) && ((pos + zeD) < 112)) {
+            switch (chip) {
+                    case 1:
+                        chip1.pos = chip1.pos + zeD;
+                        localStorage.setItem("chip" + chip, chip1.pos); // replace with inGame.saveState
+                        break;
+                    case 2:
+                        chip2.pos = chip2.pos + zeD;
+                        localStorage.setItem("chip" + chip, chip2.pos);
+                        break;
+                    case 3:
+                        chip3.pos = chip3.pos + zeD;
+                        localStorage.setItem("chip" + chip, chip3.pos);
+                        break;
+                    case 4:
+                        chip4.pos = chip4.pos + zeD;
+                        localStorage.setItem("chip" + chip, chip4.pos);
+                        break;
+                };
+                pos = pos + zeD;
+        } else if (((pos + zeD) > 111) && ((pos + zeD) < 200)) {
+            switch (chip) {
+                    case 1:
+                        chip1.pos = chip1.pos + zeD - 87;
+                        localStorage.setItem("chip" + chip, chip1.pos); // replace with inGame.saveState
+                        break;
+                    case 2:
+                        chip2.pos = chip2.pos + zeD - 87;
+                        localStorage.setItem("chip" + chip, chip2.pos);
+                        break;
+                    case 3:
+                        chip3.pos = chip3.pos + zeD - 87;
+                        localStorage.setItem("chip" + chip, chip3.pos);
+                        break;
+                    case 4:
+                        chip4.pos = chip4.pos + zeD - 87;
+                        localStorage.setItem("chip" + chip, chip4.pos);
+                        break;
+                };
+                pos = pos + zeD - 87;
+        };
+        
 		
-		if (position[pos][0] == 0) {
+		if (position[pos][0] == 0) { // I think this function add markers for multiple chips on one block.
             position[pos][0] = 1;
             x = 0;
             localStorage.setItem("chipx" + chip, 0);

@@ -1,3 +1,11 @@
+// < 46 - everything big lap without crossing start and starting somewhere on big lap but ending anywhere including panama & suez.
+// > 45 && < 108 - big lap crossed start can end anywhere including panama & suez
+// > 107 (109?) - started from panama lap can end anywhere including panama lap after crossing start
+// > 227 - started from suez
+
+
+
+
 //new something
 task:
 Create new gamestate "-1" where options, start game buttons, restart located.
